@@ -59,7 +59,7 @@ A list of environment variables to substitute (e.g. `["PIP_INDEX_URL",
 "PIP_RETRIES"]`). The corresponding variables are expanded in `extra_pip_args`
 using the syntax `$VARNAME` or `${VARNAME}` (expanding to empty string if unset)
 or `${VARNAME:-default}` (expanding to default if the variable is unset or empty
-in the environment). Note: On Bazel 6 and Bazel 7.0 changes to the variables named
+in the environment). Note: On Bazel 7.0 changes to the variables named
 here do not cause packages to be re-fetched. Don't fetch different things based
 on the value of these variables.
 """,

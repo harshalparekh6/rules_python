@@ -13,7 +13,7 @@
 # limitations under the License.
 """Providers for Python rules."""
 
-load(":util.bzl", "define_bazel_6_provider")
+load(":util.bzl", "define_bazel_provider")
 
 DEFAULT_STUB_SHEBANG = "#!/usr/bin/env python3"
 
@@ -124,7 +124,7 @@ def _PyRuntimeInfo_init(
         "zip_main_template": zip_main_template,
     }
 
-PyRuntimeInfo, _unused_raw_py_runtime_info_ctor = define_bazel_6_provider(
+PyRuntimeInfo, _unused_raw_py_runtime_info_ctor = define_bazel_provider(
     doc = """Contains information about a Python runtime, as returned by the `py_runtime`
 rule.
 

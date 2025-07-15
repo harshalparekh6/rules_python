@@ -1,6 +1,6 @@
 # Setting up coverage
 
-As of Bazel 6, the Python toolchains and bootstrap logic supports providing
+As of Bazel 7, the Python toolchains and bootstrap logic supports providing
 coverage information using the `coverage` library.
 
 As of `rules_python` version `0.18.1`, builtin coverage support can be enabled

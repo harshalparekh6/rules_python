@@ -16,7 +16,7 @@
 load("@rules_python_internal//:rules_python_config.bzl", "config")
 load(":builders.bzl", "builders")
 load(":reexports.bzl", "BuiltinPyInfo")
-load(":util.bzl", "define_bazel_6_provider")
+load(":util.bzl", "define_bazel_provider")
 
 def _VenvSymlinkKind_typedef():
     """An enum of types of venv directories.
@@ -152,7 +152,7 @@ def _PyInfo_init(
         "venv_symlinks": venv_symlinks,
     }
 
-PyInfo, _unused_raw_py_info_ctor = define_bazel_6_provider(
+PyInfo, _unused_raw_py_info_ctor = define_bazel_provider(
     doc = """Encapsulates information provided by the Python rules.
 
 Instead of creating this object directly, use {obj}`PyInfoBuilder` and

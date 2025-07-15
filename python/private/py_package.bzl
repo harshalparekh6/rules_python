@@ -42,10 +42,6 @@ def _py_package_impl(ctx):
     py_info = py_info.build()
     inputs.add(py_info.transitive_sources)
 
-    # Remove conditional once Bazel 6 support dropped.
-    if hasattr(py_info, "transitive_pyc_files"):
-        inputs.add(py_info.transitive_pyc_files)
-
     if hasattr(py_info, "transitive_pyi_files"):
         inputs.add(py_info.transitive_pyi_files)
 
